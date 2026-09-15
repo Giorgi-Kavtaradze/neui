@@ -1,13 +1,7 @@
 import Link from "next/link"
 
 import { siteConfig } from "@/lib/config"
-import { FIGMA_URL, FigmaIcon } from "@/lib/nav-config"
 import { cn } from "@/lib/utils"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
 
 const resourceLinks = [
   { label: "Components", href: "/components" },
@@ -17,7 +11,6 @@ const resourceLinks = [
 const communityLinks = [
   { label: "GitHub", href: siteConfig.links.github },
   { label: "X / Twitter", href: siteConfig.links.twitter },
-  { label: "Figma", href: FIGMA_URL },
 ]
 
 const currentYear = 2026
@@ -93,20 +86,6 @@ export function SiteFooter({ className }: { className?: string }) {
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </Link>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={FIGMA_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-site-muted-foreground hover:text-site-foreground focus-visible:ring-site-ring site-rounded-sm transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-                    aria-label="View NeUI on Figma"
-                  >
-                    <FigmaIcon className="size-[18px]" aria-hidden="true" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>Free shadcn/ui Figma</TooltipContent>
-              </Tooltip>
               <Link
                 href={siteConfig.links.github}
                 target="_blank"
