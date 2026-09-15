@@ -8,7 +8,6 @@ import { navFlatItems } from "@/lib/nav-config"
 import { Separator } from "@/components/ui/separator"
 import { CommandMenuLazy } from "@/components/command-menu-lazy"
 import { DesktopNav } from "@/components/desktop-nav"
-import { FigmaLink } from "@/components/figma-link"
 import { GitHubLink } from "@/components/github-link"
 import { Logo } from "@/components/logo"
 import { MobileNav } from "@/components/mobile-nav"
@@ -44,7 +43,6 @@ export async function SiteHeader() {
               <Separator orientation="vertical" className="mx-1" />
               <ThemeModeToggleButton variant="ghost" className="size-8" />
               <XLink />
-              <FigmaLink />
               <GitHubLink />
             </div>
           </div>
